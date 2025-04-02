@@ -13,20 +13,23 @@ This is a simple trivia game designed for kids aged 10 and above. The game uses 
 
 The game flow is visually represented below:
 
-<!-- ![Game Flow](call.png | width=100) -->
 <p >
-    <img src="call.png" alt="Description" width="400">
+    <img src="assets/call.png" alt="Description" width="400">
 </p>
 The diagram illustrates how the game interacts with the user and the Gemini API to provide a seamless trivia experience.
 
 ## Example of Executing the Game
 The question:
 <p>
-    <img src="question.png" alt="Trivia Question Example" width="500">
+    <img src="assets/question.png" alt="Trivia Question Example" width="500">
 </p>
-The answer:
+Correct answer:
 <p >
-    <img src="answer.png" alt="Trivia Feedback" width="500">
+    <img src="assets/correct-answer.png" alt="Trivia Feedback" width="500">
+</p>
+Wrong answer:
+<p >
+    <img src="assets/wrong-answer.png" alt="Trivia Feedback" width="500">
 </p>
 
 ## Prerequisites
@@ -39,7 +42,7 @@ The answer:
 
 ## Installation
 
-1. Clone the repository or download the source code.
+1. Clone the repository or download the source code from my [Github Repo](https://github.com/ahmad081177/ai-trivia-turtle).
 2. Install the required Python packages:
    ```sh
    pip install google-generativeai python-dotenv
@@ -61,15 +64,16 @@ The answer:
 ## How to Play
 
 1. A trivia question with four options will appear on the screen.
-2. Enter the number corresponding to your answer in the input box.
-3. If your answer is correct, a heart will be displayed, and your score will increase.
-4. If your answer is incorrect, a sad face will be displayed.
-5. The game will automatically proceed to the next question after a short pause.
+2. Click the button with the correct answer.
+3. If your answer is correct, two red hearts will be displayed, and your score will increase.
+4. If your answer is incorrect, two sad faces will be displayed.
+5. The game will automatically proceed to the next question after a short pause (~3 seconds).
+6. The game continues until you click the "Quit" button.
 
 ## File Structure
 
 - `llm.py`: Handles interactions with the Gemini API.
-- `shapes.py`: Contains functions to draw graphical elements like hearts and sad faces.
+- `shapes.py`: Contains functions to draw graphical elements like hearts, sad faces and clickable buttons.
 - `main.py`: Main game logic and user interface.
 - `.env`: Stores API credentials for the Gemini API.
 
